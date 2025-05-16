@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Mandiri - Terdepan, Terpercaya, Tumbuh Bersama Anda</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        
+        header {
+            background-color: #00529c;
+            color: white;
+            padding: 1rem 0;
+        }
+        
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 5%;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            padding-bottom: 0.5rem;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 55px;
+        }
+        
+        .search-bar {
+            display: flex;
+        }
+        
+        .search-bar input {
+            padding: 0.5rem;
+            border: none;
+            border-radius: 4px 0 0 4px;
+        }
+        
+        .search-bar button {
+            background-color: #ffb81c;
+            color: #00529c;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        
+        nav {
+            padding: 1rem 5%;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: #ffb81c;
+        }
+        
+        .hero {
+            background-image: linear-gradient(rgba(0, 82, 156, 0.7), rgba(0, 82, 156, 0.7)), url('https://via.placeholder.com/1600x600');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 5rem 5%;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-button {
+            background-color: #ffb81c;
+            color: #00529c;
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .cta-button:hover {
+            background-color: #e6a619;
+        }
+        
+        .features {
+            padding: 4rem 5%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .feature-card {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .feature-card img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 1rem;
+        }
+        
+        .feature-card h3 {
+            color: #00529c;
+            margin-bottom: 1rem;
+        }
+        
+        .news-section {
+            background-color: #f0f0f0;
+            padding: 4rem 5%;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-header h2 {
+            color: #00529c;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .news-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .news-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .news-content {
+            padding: 1.5rem;
+        }
+        
+        .news-content h3 {
+            color: #00529c;
+            margin-bottom: 0.5rem;
+        }
+        
+        .news-content p {
+            margin-bottom: 1rem;
+        }
+        
+        .read-more {
+            color: #00529c;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .read-more:hover {
+            text-decoration: underline;
+        }
+        
+        .app-section {
+            padding: 4rem 5%;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+        
+        .app-content {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .app-content h2 {
+            color: #00529c;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .app-image {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+        
+        .app-image img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .app-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .app-button {
+            background-color: #00529c;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+        }
+        
+        footer {
+            background-color: #00529c;
+            color: white;
+            padding: 3rem 5% 1rem;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-column h3 {
+            color: #ffb81c;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-column a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .footer-column a:hover {
+            text-decoration: underline;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .social-icons a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s;
+        }
+        
+        .social-icons a:hover {
+            background-color: #ffb81c;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .hero {
+                padding: 3rem 5%;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <div class="logo">
+                <img src="image/logo.png" alt="Logo Bank Mandiri">
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Cari...">
+                <button>Cari</button>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.htm" class="active">Beranda</a></li>
+                <li><a href="about.html">Tentang Kami</a></li>
+                <li><a href="layanan.html">Layanan</a></li>
+                <li><a href="news.html">Berita</a></li>
+                <li><a href="karir.html">Karir</a></li>
+                <li><a href="contact.html">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Terdepan, Terpercaya, Tumbuh Bersama Anda</h1>
+        <p>Bank Mandiri hadir untuk memberikan layanan perbankan terbaik bagi seluruh masyarakat Indonesia. Kami berkomitmen untuk menjadi partner finansial Anda dalam mencapai tujuan keuangan.</p>
+        <button class="cta-button">Buka Rekening Sekarang</button>
+    </section>
+
+    <section class="features">
+        <div class="feature-card">
+            <img src="image/tabungan.jpeg" alt="Tabungan Icon">
+            <h3>Tabungan</h3>
+            <p>Berbagai pilihan tabungan dengan keuntungan dan fasilitas yang sesuai dengan kebutuhan Anda.</p>
+        </div>
+        <div class="feature-card">
+            <img src="image/KPR-Mandiri.jpg" alt="KPR Icon">
+            <h3>KPR</h3>
+            <p>Wujudkan rumah impian Anda dengan KPR Bank Mandiri yang fleksibel dan terjangkau.</p>
+        </div>
+        <div class="feature-card">
+            <img src="image/invest.jpg" alt="Investasi Icon">
+            <h3>Investasi</h3>
+            <p>Tingkatkan nilai aset Anda dengan berbagai produk investasi yang kami tawarkan.</p>
+        </div>
+    </section>
+
+    <section class="news-section">
+        <div class="section-header">
+            <h2>Berita Terbaru</h2>
+            <p>Dapatkan informasi terkini seputar Bank Mandiri dan dunia perbankan</p>
+        </div>
+        <div class="news-grid">
+            <div class="news-card">
+                <img src="image/bank.jpeg" alt="Berita 1">
+                <div class="news-content">
+                    <h3>Bank Mandiri Raih Penghargaan Best Digital Bank</h3>
+                    <p>Bank Mandiri berhasil meraih penghargaan sebagai Best Digital Bank di ajang Indonesia Banking Award 2025.</p>
+                    <a href="news.html" class="read-more">Baca Selengkapnya</a>
+                </div>
+            </div>
+            <div class="news-card">
+                <img src="image/umkm.jpg" alt="Berita 2">
+                <div class="news-content">
+                    <h3>Mandiri Luncurkan Program Pembiayaan UMKM</h3>
+                    <p>Bank Mandiri meluncurkan program pembiayaan khusus untuk mendukung pertumbuhan UMKM di Indonesia.</p>
+                    <a href="news.html" class="read-more">Baca Selengkapnya</a>
+                </div>
+            </div>
+            <div class="news-card">
+                <img src="image/Mandiri-Syariah_Layanan-Hari-Batik-3-1280x720.jpg" alt="Berita 3">
+                <div class="news-content">
+                    <h3>Mandiri Syariah Perluas Jaringan di Indonesia Timur</h3>
+                    <p>Bank Mandiri Syariah memperluas jaringan layanannya di wilayah Indonesia Timur untuk menjangkau lebih banyak nasabah.</p>
+                    <a href="news.html" class="read-more">Baca Selengkapnya</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="app-section">
+        <div class="app-content">
+            <h2>Mandiri Mobile Banking</h2>
+            <p>Nikmati kemudahan bertransaksi kapan saja dan di mana saja dengan Mandiri Mobile Banking. Akses semua layanan perbankan Anda hanya dalam genggaman.</p>
+            <ul>
+                <li>Transfer dana dengan mudah</li>
+                <li>Pembayaran tagihan</li>
+                <li>Pembelian pulsa dan paket data</li>
+                <li>Informasi saldo dan mutasi rekening</li>
+                <li>Pembukaan rekening online</li>
+            </ul>
+
+                <a href="https://play.google.com/store/apps/details?id=id.bmri.livin&hl=en" target="_blank" style="margin: 0 10px;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Download on Google Play" style="height: 60px;">
+      </a>
+                <a href="" target="_blank" style="margin: 0 10px;">
+        <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on App Store" style="height: 60px;">
+      </a>
+        </div>
+        <div class="app-image">
+            <img src="image/livin app.png"="Mandiri Mobile App">
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Bank Mandiri</h3>
+                <p>PT Bank Mandiri (Persero) Tbk.</p>
+                <p>Plaza Mandiri, Jl. Jenderal Gatot Subroto Kav. 36-38 Jakarta 12190, Indonesia</p>
+                <div class="social-icons">
+                    <a href="#"><span>FB</span></a>
+                    <a href="#"><span>TW</span></a>
+                    <a href="#"><span>IG</span></a>
+                    <a href="#"><span>YT</span></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Layanan</h3>
+                <ul>
+                    <li><a href="#">Tabungan</a></li>
+                    <li><a href="#">Kredit</a></li>
+                    <li><a href="#">Kartu Kredit</a></li>
+                    <li><a href="#">Investasi</a></li>
+                    <li><a href="#">Asuransi</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Informasi</h3>
+                <ul>
+                    <li><a href="about.html">Tentang Kami</a></li>
+                    <li><a href="#">Hubungan Investor</a></li>
+                    <li><a href="#">Laporan Tahunan</a></li>
+                    <li><a href="#">Karir</a></li>
+                    <li><a href="news.html">Berita</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Bantuan</h3>
+                <ul>
+                    <li><a href="contact.html">Kontak Kami</a></li>
+                    <li><a href="#">Lokasi ATM</a></li>
+                    <li><a href="#">Lokasi Cabang</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Pengaduan Nasabah</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 PT Bank Mandiri (Persero) Tbk. Hak Cipta Dilindungi.</p>
+        </div>
+    </footer>
+</body>
+</html>
